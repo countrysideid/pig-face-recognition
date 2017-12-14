@@ -1,0 +1,7 @@
+#! /bin/bash
+
+for i in 1..80 
+do 
+mkdir $i
+ffmpeg -i inputfile.mp4 -r 1 -f $i image-%3d.jpeg #convert video to jpeg
+done
